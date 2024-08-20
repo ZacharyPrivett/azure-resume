@@ -1,4 +1,9 @@
 import { cn } from "@/lib/utils";
+import { Globe } from "./GridGlobe";
+import About from "../About";
+import Certs from "../Certs";
+import CurrentPojects from "../CurrentPojects";
+import Contact from "../Contact";
 
 export const BentoGrid = ({
   className,
@@ -44,7 +49,7 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "row-span-1 relative rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-transparent justify-between flex flex-col space-y-4",
+        "row-span-1 relative overflow-hidden rounded-3xl shadow-input dark:shadow-none  dark:bg-black dark:border-white/[0.2] bg-white border border-transparent justify-between flex flex-col space-y-4",
         className
       )}
       style={{
@@ -71,13 +76,29 @@ export const BentoGridItem = ({
           />           
           )}
         </div>
-      </div>
-      <div className="group-hover/bento:translate-x-2 transition duration-200">
-        <div className="font-sans font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2">
-          {title}
-        </div>
-        <div className="font-sans font-normal text-neutral-600 text-xs dark:text-neutral-300">
-          {description}
+
+        <div className={cn(titleClassName, 'group-hover/bento:translate-x-2 transition duration-200 relative md:h-full w-full min-h-40 flex flex-col px-5 p-5 lg:p-5')}>
+          <div className={`${id === 3 ? 'drop-shadow-[2px_2px_4px_rgba(0,0,0,0.9)] bg-gray-400 bg-opacity-50 px-2 py-1' : "font-sans font-extralight text-[#c1c2d3] text-sm md:text-xs lg:text-base z-10" }`}>
+            {description}
+          </div>
+            <div className={`${id === 3 ? 'drop-shadow-[0_6px_6px_rgba(0,0,0,0.9)] bg-gray-400 bg-opacity-50 px-2 py-1' : 'font-sans font-bold text-lg lg:text-3xl z-10' } font-sans font-bold text-lg lg:text-3xl z-10`}>
+              {id === 1 ? (
+              <a href="https://github.com/ZacharyPrivett" className="hover:underline">
+                {title}
+              </a>
+            ) : id === 3 ? (
+              <a href="https://www.linkedin.com/in/zach-privett-47315a223/" className="hover:underline">
+                {title}
+              </a>
+            ) : (
+              title
+            )}
+            </div>
+            {id === 1 && <Globe />}
+            {id === 2 && <About />}
+            {id === 5 && <Certs />}
+            {id === 4 && <CurrentPojects />}
+            {id === 6 && <Contact />}
         </div>
       </div>
     </div>
