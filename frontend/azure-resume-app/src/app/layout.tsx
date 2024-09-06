@@ -7,7 +7,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Zachary Privett's Developer Profile",
-  description: "Designed to introduce myself",
+  description: "Designed to introduce myself and show off my work",
+  icons: { icon: "/zwp-icon.png", apple: "/apple-touch-icon.png" }
 };
 
 export default function RootLayout({
