@@ -81,7 +81,7 @@ export const BentoGridItem = ({
           <div className={`${id === 3 ? 'drop-shadow-[2px_2px_4px_rgba(0,0,0,0.9)] bg-gray-400 bg-opacity-50 px-2 py-1' : "font-sans font-extralight text-[#c1c2d3] text-sm md:text-xs lg:text-base z-10" }`}>
             {description}
           </div>
-            <div className={`${id === 3 ? 'drop-shadow-[0_6px_6px_rgba(0,0,0,0.9)] bg-gray-400 bg-opacity-50 px-2 py-1' : 'font-sans font-bold text-lg lg:text-3xl z-10' } font-sans font-bold text-lg lg:text-3xl z-10`}>
+            <div className={`${id === 3 ? 'drop-shadow-[0_6px_6px_rgba(0,0,0,0.9)] bg-gray-400 bg-opacity-50 px-2 py-1' : 'font-sans font-bold text-lg lg:text-3xl z-10' } font-sans font-bold text-lg lg:text-3xl z-20`}>
               {id === 1 ? (
               <a href="https://github.com/ZacharyPrivett" className="hover:underline">
                 {title}
